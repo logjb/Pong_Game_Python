@@ -1,6 +1,11 @@
 #pong game
 
 import turtle
+#mess with os using calls
+#mac
+import os
+#windows
+#import winsound
 
 window = turtle.Screen()
 window.title("Pong")
@@ -113,6 +118,9 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
+        #winsound.PlaySound(bounce.wav", winsound.SND_ASYNC)
+        #plays sound, & has it do it in its own thread
+        #os.system("afplay bounce.wav&")
 
         # border checking
     if ball.ycor() < -280:
